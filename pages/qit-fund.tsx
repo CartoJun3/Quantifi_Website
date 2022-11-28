@@ -66,9 +66,9 @@ function MyPage() {
     const number = parseInt(value, 10);
     if (value !== "" || number == 0) {
       try {
-        const n = ethers.utils.parseUnits(value, 6);
+        const n = ethers.utils.parseUnits(value, 36);
         const wd = await QIT.getWithdrawalReturn(n);
-        setOutputValue((+ethers.utils.formatUnits(wd, 36)).toFixed(2));
+        setOutputValue((+ethers.utils.formatUnits(wd, 18)).toFixed(2));
       } catch (error) {
         console.log(error);
       }
@@ -81,7 +81,7 @@ function MyPage() {
         try {
           const n = ethers.utils.parseEther(value);
           const deposit = await QIT.getDepositReturn(n);
-          setOutputValue((+ethers.utils.formatUnits(deposit, 6)).toFixed(2));
+          setOutputValue((+ethers.utils.formatUnits(deposit, 36)).toFixed(2));
         } catch (error) {
           console.log(error);
         }
