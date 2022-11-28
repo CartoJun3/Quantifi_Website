@@ -68,7 +68,7 @@ function MyPage() {
       try {
         const n = ethers.utils.parseUnits(value, 6);
         const wd = await QIT.getWithdrawalReturn(n);
-        setOutputValue((+ethers.utils.formatUnits(wd, 18)).toFixed(2));
+        setOutputValue((+ethers.utils.formatUnits(wd, 36)).toFixed(2));
       } catch (error) {
         console.log(error);
       }
