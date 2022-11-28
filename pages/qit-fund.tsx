@@ -36,16 +36,16 @@ function MyPage() {
   const [notificationMessage, setNotificationMessage] = useState<string>("");
   const [notificationTitle, setNotificationTitle] = useState<string>("");
 
-  const minDeposit = 1000; // this will be updated to actual value
-  const minTopup = 500; // this will be updated to actual value
-  const tBNBChain = 97;
+  const minDeposit = 1; // this will be updated to actual value
+  const minTopup = 1; // this will be updated to actual value
+  const tBNBChain = 56;
   const [loading, setLoading] = useState<boolean>(false); // loading state for button
 
   const { library, chainId, account, active, error, setError, connector } = useWeb3React();
 
-  const QIT = new ethers.Contract("0x4C4470D0B9c0dD92B25Be1D2fB5181cdA7e6E3f7", myPageAbi, library);
+  const QIT = new ethers.Contract("0xF836781d4F3801cEC6f97A7700c4097820aE7f05", myPageAbi, library);
   const ERC20 = new ethers.Contract(
-    "0xEcAD8721BA48dBdc0eac431D68A0b140F07c0801",
+    "0x55d398326f99059ff775485246999027b3197955",
     erc20ABI,
     library
   );
