@@ -39,7 +39,7 @@ function WalletConnectButton() {
   }
 
   function handleNetworkSwitch() {
-    if (chainId !== 97) {
+    if (chainId !== 56) {
       setWrongChain(true);
     }
   }
