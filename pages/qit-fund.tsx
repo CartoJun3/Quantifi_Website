@@ -230,12 +230,12 @@ function MyPage() {
       if (currentTab === "withdrawal") {
         setSwapButtonText("Swap QIT for USDT");
       } else if (
-        contractInfo.allowance.toBigInt() < ethers.utils.parseUnits(inputValue, 6).toBigInt() &&
+        contractInfo.allowance.toBigInt() < ethers.utils.parseUnits(inputValue, 36).toBigInt() &&
         currentTab === "deposit"
       ) {
         setSwapButtonText("Give permission to deposit USDT");
       } else if (
-        contractInfo.allowance.toBigInt() >= ethers.utils.parseUnits(inputValue, 6).toBigInt()
+        contractInfo.allowance.toBigInt() >= ethers.utils.parseUnits(inputValue, 18).toBigInt()
       ) {
         setSwapButtonText("Swap USDT for QIT");
       }
