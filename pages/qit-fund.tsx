@@ -167,7 +167,7 @@ function MyPage() {
           const QITconnect = QIT.connect(library.getSigner());
           try {
             const transaction = await QITconnect.requestWithdrawal(
-              ethers.utils.parseUnits(inputValue, 6)
+              ethers.utils.parseUnits(inputValue, 36)
             );
             changeNotificationContent("In progress", "Withdrawal Requested", "loading");
             setNotificationShow(true);
