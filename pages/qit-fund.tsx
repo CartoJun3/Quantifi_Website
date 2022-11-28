@@ -281,7 +281,7 @@ function MyPage() {
                 </span>
                 <span className="text-right">
                   {!loading ? (
-                    (+ethers.utils.formatUnits(contractInfo.qitbalance, 6)).toFixed(2)
+                    (+ethers.utils.formatUnits(contractInfo.qitbalance, 36)).toFixed(2)
                   ) : (
                     <svg
                       className="inline w-4 h-4 mr-1 -ml-1 text-black animate-spin"
